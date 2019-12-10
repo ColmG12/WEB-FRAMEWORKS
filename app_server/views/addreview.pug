@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        form#addReview(action="", method="post", role="form")
+          .form-group.row
+            label.col-sm-2.col-form-label(for="review") Review
+            .col-sm-10
+              textarea#review.form-control(name="review", rows="7")
+          button.btn.btn-primary.float-right Add my review
+        
+
+            

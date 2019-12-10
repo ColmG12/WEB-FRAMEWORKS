@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= pageHeader.title
+  small &nbsp; #{pageHeader.strapline}
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2=pageHeader.strap1
+        form(method='POST' action='/login')
+          div.form-group
+            label(for='email') Email
+            input.form-control(type='text' id='email' placeholder='email' name='email')
+          div.form-group
+            label(for='password') Password
+            input.form-control(type='password' id='password' placeholder='password' name='password')
+          button.btn.btn-primary(type='submit') Log in
+        h1.display-4.m-b-2=pageHeader.strap2
+        form(method='GET' action='/login/register')
+          div.form-group
+          button.btn.btn-primary(type='submit') Register
+          
+//-reference - https://teamtreehouse.com/library/creating-a-login-form-with-pug-jade
